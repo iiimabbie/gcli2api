@@ -1,16 +1,12 @@
-# GeminiCLI to API
+# GeminiCLI to API （CF特化版）
 
-**将 GeminiCLI 和 Antigravity 转换为 OpenAI 、GEMINI 和 Claude API 兼容接口**
+> Fork 自 [su-kaka/gcli2api](https://github.com/su-kaka/gcli2api)，針對 Cloudflare 自動登入等個人需求進行調整。
+
+**將 GeminiCLI 和 Antigravity 轉換為 OpenAI、GEMINI 和 Claude API 相容接口**
 
 [![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
 [![License: CNC-1.0](https://img.shields.io/badge/License-CNC--1.0-red.svg)](LICENSE)
-[![Docker](https://img.shields.io/badge/docker-available-blue.svg)](https://github.com/su-kaka/gcli2api/pkgs/container/gcli2api)
 
-[English](docs/README_EN.md) | 中文
-
-## 🚀 快速部署
-
-[![Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/97VMEF?referralCode=su-kaka)
 ---
 
 ## ⚠️ 许可证声明

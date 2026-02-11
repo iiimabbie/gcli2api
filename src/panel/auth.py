@@ -28,7 +28,9 @@ router = APIRouter(prefix="/auth", tags=["auth"])
 
 @router.get("/login")
 async def login_redirect():
-    return RedirectResponse(url="/", status_code=status.HTTP_302_FOUND)
+    from config import get_panel_password
+    pwd = await get_panel_password()
+    return RedirectResponse(url=f"/?pwd={pwd}", status_code=status.HTTP_302_FOUND)
 
 
 @router.post("/login")
