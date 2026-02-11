@@ -2,8 +2,8 @@
 认证路由模块 - 处理 /auth/* 相关的HTTP请求
 """
 
-from fastapi import APIRouter, Depends, HTTPException
-from fastapi.responses import JSONResponse
+from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi.responses import RedirectResponse, JSONResponse
 
 from log import log
 from src.auth import (
@@ -24,6 +24,11 @@ from src.utils import verify_panel_token
 
 # 创建路由器
 router = APIRouter(prefix="/auth", tags=["auth"])
+
+
+@router.get("/login")
+async def login_redirect():
+    return RedirectResponse(url="/", status_code=status.HTTP_302_FOUND)
 
 
 @router.post("/login")

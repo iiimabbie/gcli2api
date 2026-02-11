@@ -3061,7 +3061,16 @@ window.onload = async function () {
     const autoLoginSuccess = await autoLogin();
 
     if (!autoLoginSuccess) {
-        showStatus('请输入密码登录', 'info');
+        // 检查 URL 参数是否带有密码（支持 ?pwd=xxx 自动登入）
+        const urlPwd = new URLSearchParams(window.location.search).get('pwd');
+        if (urlPwd) {
+            // 清除 URL 中的密码参数，避免泄露
+            window.history.replaceState({}, '', window.location.pathname);
+            document.getElementById('loginPassword').value = urlPwd;
+            await login();
+        } else {
+            showStatus('请输入密码登录', 'info');
+        }
     } else {
         // 登录成功后获取版本信息
         await fetchAndDisplayVersion();
