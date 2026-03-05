@@ -1,4 +1,4 @@
-full_hash=43e82b5fbd4930dcc96cd02205b032df16cf70ec
-short_hash=43e82b5
-message=Merge pull request #347 from afu6609/fix/clean-schema-claude-patternProperties
-date=2026-02-28 15:39:48 +0800
+full_hash=955aefdfee379f1e258100be628c187a2d4c45d7
+short_hash=955aefd
+message=Merge branch 'master' of https://github.com/su-kaka/gcli2api
+date=2026-03-05 23:32:26 +0800
